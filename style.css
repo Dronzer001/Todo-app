@@ -25,11 +25,10 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;   /* CENTER vertically */
-  height: 100vh;         /* FULL SCREEN */
-  overflow: hidden;      /* REMOVE SCROLL */
+  align-items: center;
 
-  transition: 0.3s;
+  min-height: 100vh;
+  padding: 10px;
 }
 
 .dark body {
@@ -37,7 +36,8 @@ body {
 }
 
 .app {
-  width: 380px;
+  width: 100%;
+  max-width: 420px;
   background: var(--card);
   padding: 25px;
   border-radius: 18px;
@@ -482,5 +482,18 @@ li:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 14px;
   }
 }
